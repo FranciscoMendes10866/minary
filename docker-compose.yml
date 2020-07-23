@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+
+  mysql:
+    image: mysql
+    container_name: mysql
+    restart: always
+    ports:
+      - "4444:3306"
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    networks:
+      - my-network
+    ports:
+      - "4040:80"
+    environment:
+      PMA_HOST: mysql
+    depends_on:
+      - mysql
+
+networks:
+  my-network:
