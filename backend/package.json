@@ -55,7 +55,6 @@
       "multer-storage-cloudinary": "^4.0.0",
       "mysql2": "^2.1.0",
       "reflect-metadata": "^0.1.10",
-      "typeorm": "0.2.25",
-      "mysql": "^2.14.1"
+      "typeorm": "0.2.25"
    }
 }
