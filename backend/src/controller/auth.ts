@@ -31,7 +31,7 @@ class AuthController {
     if (!validPass) {
       throw new Error('Passwords don\'t match')
     }
-    const token = jwt.sign({ auth: userExists }, 'private')
+    const token = jwt.sign({ id: userExists.id, email: userExists.email, username: userExists.username }, 'private')
     return res.json({ token })
   }
 }
