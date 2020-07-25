@@ -9,7 +9,7 @@
       "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
       "lint": "eslint src --ext .ts",
       "lint:fix": "eslint src --fix src --ext .ts",
-      "start": "ts-node src/index.ts",
+      "start": "ts-node src/main.ts",
       "typeorm": "ts-node ./node_modules/typeorm/cli.js"
    },
    "devDependencies": {
