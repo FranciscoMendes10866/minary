@@ -5,7 +5,7 @@ import cors from 'cors'
 import compression from 'compression'
 import morgan from 'morgan'
 
-import authRouter from './routes/auth.router'
+import authRouter from './routes/auth'
 
 const app = express()
 
