@@ -44,7 +44,20 @@
 </template>
 
 <script>
-export default {}
+import { mapGetters, mapActions } from 'vuex'
+
+export default {
+  computed: {
+    ...mapGetters('auth', [
+      'isLoggedIn'
+    ])
+  },
+  methods: {
+    ...mapActions('auth', [
+      'LogOut'
+    ])
+  }
+}
 </script>
 
 <style scoped>
