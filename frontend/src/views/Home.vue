@@ -18,7 +18,17 @@
     <section>
       <div class="container mx-auto">
         <div class="flex flex-auto justify-center">
-          <Posts />
+          <div class="col-start-1">
+            <Posts
+              v-for="post in posts"
+              :key="post.id"
+              :category="post.category"
+              :title="post.title"
+              :description="post.description"
+              :authorUsername="post.authorUsername"
+              :postId="post.id"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -26,7 +36,25 @@
 </template>
 
 <script>
+import { mapActions, mapMutations, mapState } from 'vuex'
+
 export default {
+  mounted () {
+    this.fetchPosts()
+  },
+  computed: {
+    ...mapState('posts', [
+      'posts'
+    ])
+  },
+  methods: {
+    ...mapMutations('posts', [
+      'setFetchPosts'
+    ]),
+    ...mapActions('posts', [
+      'fetchPosts'
+    ])
+  },
   components: {
     Posts: () => import('../components/Post')
   }
