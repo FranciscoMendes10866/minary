@@ -6,8 +6,8 @@ import authGuard from '../guards/authGuard'
 const router = Router()
 
 router.post('/', authGuard, postController.Store)
-router.get('/', authGuard, postController.Index)
-router.get('/:id', authGuard, postController.Single)
+router.get('/', postController.Index)
+router.get('/:id', postController.Single)
 router.delete('/:id', authGuard, postController.Destroy)
 
 export default router

@@ -18,7 +18,7 @@
     <section>
       <div class="container mx-auto">
         <div class="flex flex-auto justify-center">
-          <div class="col-start-1">
+          <div>
             <Posts
               v-for="post in posts"
               :key="post.id"
@@ -39,6 +39,11 @@
 import { mapActions, mapMutations, mapState } from 'vuex'
 
 export default {
+  data () {
+    return {
+      search: ''
+    }
+  },
   mounted () {
     this.fetchPosts()
   },
