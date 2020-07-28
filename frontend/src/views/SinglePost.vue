@@ -5,7 +5,7 @@
         <div>
           <header class="mt-12">
             <h1
-              class="text-orange-500 text-lg font-semibold uppercase font-normal tracking-wide"
+              class="text-orange-500 text-lg font-semibold uppercase tracking-wide"
             >{{ post.category }}</h1>
             <h2 class="text-blue-900 font-bold text-3xl mt-2">{{ post.title }}</h2>
             <h3 class="text-blue-900 font-normal text-2xl mt-2">{{ post.subTitle }}</h3>

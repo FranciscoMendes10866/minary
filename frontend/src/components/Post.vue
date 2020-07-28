@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-2xl py-8">
     <h1
-      class="mb-2 text-orange-500 text-sm font-semibold uppercase font-normal tracking-wide"
+      class="mb-2 text-orange-500 text-sm font-semibold uppercase tracking-wide"
     >{{ category }}</h1>
     <router-link class="text-blue-900 font-bold text-2xl" :to="'/post/'+postId">{{ title }}</router-link>
     <p class="mt-2 text-gray-700 text-md font-normal tracking-wide">{{ description }}</p>

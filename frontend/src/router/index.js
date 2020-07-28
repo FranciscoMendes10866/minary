@@ -14,6 +14,21 @@ const routes = [
     path: '/post/:id',
     name: 'Blog Post',
     component: () => import('../views/SinglePost.vue')
+  },
+  {
+    path: '/signin',
+    name: 'Sign In',
+    component: () => import('../views/SignIn.vue')
+  },
+  {
+    path: '/signup',
+    name: 'Sign Up',
+    component: () => import('../views/SignUp.vue')
+  },
+  {
+    path: '/create',
+    name: 'Create Post',
+    component: () => import('../views/CreatePost.vue')
   }
 ]
 

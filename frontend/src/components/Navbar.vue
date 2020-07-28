@@ -27,7 +27,7 @@
             <li v-if="!isLoggedIn">
               <router-link
                 to="/signup"
-                class="px-5 py-3 shadow-md lg:ml-5 block bg-indigo-700 hover:bg-indigo-800 text-white font-medium rounded"
+                class="px-5 py-3 shadow-md lg:ml-5 block bg-orange-500 hover:bg-orange-600 text-white font-medium rounded"
               >Sign Up</router-link>
             </li>
             <li v-if="isLoggedIn">
