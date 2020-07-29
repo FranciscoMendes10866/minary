@@ -8,7 +8,7 @@
       </div>
 
       <label for="menu-toggle" class="pointer-cursor lg:hidden block">
-        <i class="im im-menu text-2xl text-gray-700"></i>
+        <i class="im im-menu-dot-v text-2xl text-gray-700"></i>
       </label>
       <input class="hidden" type="checkbox" id="menu-toggle" />
 
