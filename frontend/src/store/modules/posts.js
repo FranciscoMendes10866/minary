@@ -76,7 +76,7 @@ export default {
       state.posts.push(post)
     },
     setDeletePost (state, post) {
-      state.posts.splice(state.posts.indexOf(post), 1)
+      state.userPosts.splice(state.userPosts.indexOf(post), 1)
     },
     setUserPosts (state, userPosts) {
       state.userPosts = userPosts
