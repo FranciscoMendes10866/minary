@@ -19,6 +19,9 @@
               <router-link to="/" class="lg:p-4 py-3 px-0 block font-medium">Blog</router-link>
             </li>
             <li v-if="isLoggedIn">
+              <router-link to="/archive" class="lg:p-4 py-3 px-0 block font-medium">Archive</router-link>
+            </li>
+            <li v-if="isLoggedIn">
               <router-link to="/create" class="lg:p-4 py-3 px-0 block font-medium">Create post</router-link>
             </li>
             <li v-if="!isLoggedIn">

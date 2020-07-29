@@ -4,6 +4,7 @@ export default {
   namespaced: true,
   state: {
     posts: [],
+    userPosts: [],
     postTitle: null,
     postSubTitle: null,
     postCategory: null,
@@ -36,6 +37,18 @@ export default {
         .catch((err) => {
           console.log(err)
         })
+    },
+    fetchUserPosts ({ commit }) {
+      return API().get('/posts/userposts')
+        .then(({ data }) => {
+          commit('setFetchUserPosts', data)
+        })
+    },
+    deletePost ({ commit }, post) {
+      return API().delete(`/posts/${post.id}`)
+        .then(() => {
+          commit('setDeletePost', post)
+        })
     }
   },
   getters: {
@@ -64,6 +77,12 @@ export default {
     },
     setDeletePost (state, post) {
       state.posts.splice(state.posts.indexOf(post), 1)
+    },
+    setUserPosts (state, userPosts) {
+      state.userPosts = userPosts
+    },
+    setFetchUserPosts (state, userPosts) {
+      state.userPosts = userPosts
     }
   }
 }
