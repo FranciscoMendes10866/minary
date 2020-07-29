@@ -7,6 +7,7 @@ const router = Router()
 
 router.post('/', authGuard, postController.Store)
 router.get('/', postController.Index)
+router.get('/userposts', authGuard, postController.UserPosts)
 router.get('/:id', postController.Single)
 router.delete('/:id', authGuard, postController.Destroy)
 

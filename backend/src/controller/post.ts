@@ -35,6 +35,12 @@ class PostController {
     return res.json(post)
   }
 
+  async UserPosts (req: Request, res: Response) {
+    const postRepository = getRepository(Post)
+    const post = await postRepository.find({ where: { authorId: req.authId } })
+    return res.json(post)
+  }
+
   async Destroy (req: Request, res: Response) {
     const postRepository = getRepository(Post)
     const { id } = req.params
