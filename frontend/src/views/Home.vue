@@ -8,7 +8,7 @@
           <p class="text-white font-normal text-lg mt-2">Let's share some knowledge.</p>
           <input
             v-model="search"
-            class="mt-8 rounded-sm px-64 py-4 text-center text-lg"
+            class="mt-8 rounded-sm px-32 sm:px-48 md:px-64 py-4 text-center text-lg"
             type="text"
             placeholder="Search an article"
           />
@@ -21,6 +21,7 @@
         <div class="flex flex-auto justify-center">
           <div>
             <Posts
+              class="p-8 sm:px-10 md:p-0"
               v-for="post in filteredPosts"
               :key="post.id"
               :category="post.category"

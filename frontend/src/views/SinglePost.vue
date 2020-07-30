@@ -2,7 +2,7 @@
   <section>
     <div class="container max-auto">
       <div class="flex flex-auto justify-center">
-        <div>
+        <div class="px-8 sm:px-10 md:px-0">
           <header class="mt-12">
             <h1
               class="text-orange-500 text-lg font-semibold uppercase tracking-wide"
