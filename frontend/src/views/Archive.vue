@@ -15,7 +15,7 @@
         <div class="flex flex-auto justify-center">
           <div>
             <Posts
-              class="p-8 sm:px-10 md:p-0"
+              class="px-8 sm:px-10 md:px-0"
               v-for="post in userPosts"
               :key="post.id"
               :category="post.category"
