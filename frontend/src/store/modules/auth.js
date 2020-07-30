@@ -20,7 +20,7 @@ export default {
     SignUp ({ commit, state }) {
       return API().post('/auth/signup', {
         username: state.registerUsername,
-        email: state.registerUsername,
+        email: state.registerEmail,
         password: state.registerPassword
       })
         .then(() => {
